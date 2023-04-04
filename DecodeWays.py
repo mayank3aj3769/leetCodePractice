@@ -19,3 +19,26 @@ class Solution:
             return res
         
         return dfs(0)
+    
+'''
+ bottom up approach 
+
+ run for loop from last index :
+ if s[i] ==0 
+   dp[i]=0
+
+else:
+    dp[i]=dp[i+1]
+    if( (i+1<len(s) and s[i]=='1') or ( i+1<len(s) and s[i]=='2' and s[i+1] in '0123456')  ):
+      dp[i]+=dp[i+2]
+
+return dp[0]
+
+
+
+
+
+
+
+
+'''
